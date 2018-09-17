@@ -5,7 +5,7 @@ class SignIn extends Component {
     super(props)
 
     this.state = {
-      email: "",
+      email: props.email || "",
       password: ""
     }
   }
@@ -19,7 +19,11 @@ class SignIn extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state)
+    console.log(this.state);
+    this.setState({
+      email: "",
+      password:""
+    })
   }
 
 
@@ -28,11 +32,20 @@ class SignIn extends Component {
       <form onSubmit={this.handleSubmit}>
         <div>
           <label>Email</label>
-          <input name="email" type="email" autoComplete="off" onChange={this.handleChange} ></input>
+          <input
+            name="email"
+            type="email"
+            autoComplete="off"
+            value={this.state.email}
+            onChange={this.handleChange} ></input>
         </div>
         <div>
           <label>Password</label>
-          <input name="password" type="password" onChange={this.handleChange}></input>
+          <input
+            name="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.handleChange}></input>
         </div>
         <button type="submit">Submit Form</button>
       </form>
