@@ -37,7 +37,7 @@ class SignIn extends Component {
             type="email"
             autoComplete="off"
             value={this.state.email}
-            onChange={this.handleChange} ></input>
+            onChange={this.handleChange}/>
         </div>
         <div>
           <label>Password</label>
@@ -45,7 +45,7 @@ class SignIn extends Component {
             name="password"
             type="password"
             value={this.state.password}
-            onChange={this.handleChange}></input>
+            onChange={this.handleChange}/>
         </div>
         <button type="submit">Submit Form</button>
       </form>
