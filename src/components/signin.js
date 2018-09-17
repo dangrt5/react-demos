@@ -18,13 +18,14 @@ class SignIn extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault;
+    event.preventDefault();
+    console.log(this.state)
   }
 
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <div>
           <label>Email</label>
           <input name="email" type="email" autoComplete="off" onChange={this.handleChange} ></input>
